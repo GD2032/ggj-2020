@@ -11,15 +11,13 @@ public class ClasseHelper : MonoBehaviour
         UI = GetComponent<UI>();
         UI.Fades(true, 2, Random.Range(0, 3));
     }
-    static class Resiliencia 
-    {
         /// <summary>
         /// retorna as vidas por referencia
         /// subtraindo a maior pela menor
         /// </summary>
         /// <param name="a">vida1</param>
         /// <param name="b">vida2</param>
-        static void retVida(ref float a, ref float b)
+        public static void retVida(ref float a, ref float b)
         {
             if (a >= b)
             {
@@ -39,10 +37,12 @@ public class ClasseHelper : MonoBehaviour
         /// </summary>
         /// <param name="a">vida1</param>
         /// <param name="b">vida2</param>
-        static void juntVida(ref float a, ref float b) 
-        {
+         public static void juntVida(ref float a, ref float b) 
+         { 
             a += b;
-            b = 0;
-        } 
-    }
+            if (a > b)
+            {
+                b = 0;
+            }
+         } 
 }
