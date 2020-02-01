@@ -10,6 +10,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     public float pontos;
+    public float pontosB;
     Collider2D[] objetos;
 
     private void Awake() {
@@ -40,6 +41,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         Detectar();
         transform.localScale = new Vector3(pontos * multiplicadorTamanho, pontos * multiplicadorTamanho);
+        if(pontos == 0)
+        {
+            Destroy(gameObject);
+        }
+        else if (pontos < 0)
+            pontos = 0;
+
     }
     private void Detectar()
     {
@@ -50,13 +58,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             {
                 if (objetos[i].tag == "Coronga")
                 {
-                    print("alo");
-                    ClasseHelper.retVida(ref pontos, ref objetos[i].gameObject.GetComponent<Virus1>().pontos);
+                    ClasseHelper.retVida(ref pontos,ref objetos[i].gameObject.GetComponent<Virus1>().pontos);
                 }
-                else if(objetos[i].tag == "GlobuloB")
-                {
-                    print("hello");
-                   ClasseHelper.juntVida(ref pontos, ref objetos[i].gameObject.GetComponent<DragDrop>().pontos);
+                else if(objetos[i].tag == "GlobuloB" && this.gameObject != objetos[i].gameObject)
+                {             
+                    pontosB = objetos[i].gameObject.GetComponent<DragDrop>().pontos;
+                    ClasseHelper.juntVida(ref pontos, pontosB);
+                    Destroy(objetos[i].gameObject);
                 }
             }
         }
