@@ -5,12 +5,11 @@ using UnityEngine;
 public class ClasseHelper : MonoBehaviour
 {
 
-   // UI ui = GetComponent<UI>();
+    UI UI;
     void Start() 
     {
-        UI fades = ;
-        print("AASDSADSA"); 
-        fades.Fades(true, 1, Random.Range(0, 4));
+        UI = GetComponent<UI>();
+        UI.Fades(true, 2, Random.Range(0, 3));
     }
     static class Resiliencia 
     {
