@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class GameControler : MonoBehaviour
 {
-    [SerializeField] GameObject virus, canvas;
-    float cd;
-    bool Spawn;
+    [SerializeField] GameObject virus,hemacia,canvas;
+    float cdV,cdH;
+    bool SpawnV,SpawnH;
 
     void Start()
     {
-        Spawn = true;
-        cd = 2f;
+        SpawnV = true;
+        SpawnH = true;
+        cdV = 2f;
+        cdH = 9f;
     }
     // Update is called once per frame
     void Update()
@@ -21,11 +23,17 @@ public class GameControler : MonoBehaviour
     }
     private void GerarVirus()
     {
-        if (Spawn)
+        if (SpawnV)
         {
             Instantiate(virus, GerarPosicao(), Quaternion.identity, canvas.transform);
-            Spawn = !Spawn;
-            StartCoroutine(Cooldown(cd));
+            SpawnV = !SpawnV;
+            StartCoroutine(CooldownV(cdV));
+        }
+        if (SpawnH)
+        {
+            Instantiate(hemacia, GerarPosicao(), Quaternion.identity, canvas.transform);
+            SpawnH = !SpawnH;
+            StartCoroutine(CooldownH(cdH));
         }
 
     }
@@ -40,10 +48,15 @@ public class GameControler : MonoBehaviour
         }
         return new Vector3(0,0,0);
     }
-    IEnumerator Cooldown(float cd) 
+    IEnumerator CooldownV(float cd) 
     {
         yield return new WaitForSeconds(cd);
-        Spawn = true;
+        SpawnV = true;
     }
-    
+    IEnumerator CooldownH(float cd)
+    {
+        yield return new WaitForSeconds(cd);
+        SpawnH = true;
+    }
+
 }

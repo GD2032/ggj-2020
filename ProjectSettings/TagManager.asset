@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - canva
+  - pont
+  - virus
+  - hema
   layers:
   - Default
   - TransparentFX
@@ -14,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Hemacia
+  - Virus
+  - "Cora\xE7\xE3o"
   - 
   - 
   - 
