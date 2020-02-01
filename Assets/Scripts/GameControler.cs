@@ -5,9 +5,13 @@ using UnityEngine.UI;
 
 public class GameControler : MonoBehaviour
 {
-    [SerializeField] GameObject virus,hemacia,canvas;
+    [SerializeField] GameObject hemacia;
     float cdV,cdH;
     bool SpawnV,SpawnH;
+    [SerializeField] GameObject virus;
+    [SerializeField] Canvas canvas;
+    float cd;
+    bool Spawn;
 
     void Start()
     {
@@ -39,11 +43,20 @@ public class GameControler : MonoBehaviour
     }
     private Vector3 GerarPosicao()
     {
-        int typePosition = 0;
+        int typePosition = Random.Range(0,4);
         switch (typePosition)
         {
             case 0:
                 return new Vector3(-70, Random.Range(450, -110));
+                break;
+            case 1:
+                return new Vector3(600, Random.Range(450, -110));
+                break;
+            case 2:
+                return new Vector3(Random.Range(-70, 600), 450);
+                break;
+            case 3:
+                return new Vector3(Random.Range(-70, 600), -110);
                 break;
         }
         return new Vector3(0,0,0);

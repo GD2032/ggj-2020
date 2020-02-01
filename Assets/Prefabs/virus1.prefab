@@ -48,9 +48,9 @@ GameObject:
   - component: {fileID: 8965316052446316571}
   - component: {fileID: 8965316052446316564}
   - component: {fileID: 3190964020232914964}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: virus1
-  m_TagString: virus
+  m_TagString: Coronga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -284, y: 174}
+  m_AnchoredPosition: {x: -289, y: 171}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8965316052446316570
@@ -125,8 +125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coracaoposition: {x: 0, y: 0, z: 0}
   speed: 40
-  pontos: 2
   multiplicadorTamanho: 0.2
+  pontos: 0
   yourposition: {fileID: 8965316052446316565}
   CoriLayer:
     serializedVersion: 2
@@ -146,4 +146,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 23
+  m_Radius: 0.5

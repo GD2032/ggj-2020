@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/sprites do coração.meta
 guid: 4f7c13e42eb0f3347b4ce8041b1af321
+=======
+guid: 7b990916714083b468d5307d62e89e75
+>>>>>>> 02330cdb8939bf265e668e39fb95c89e1788a671:Assets/ScriptAragão/Animations.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -5,10 +5,13 @@ using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler {
 
-    [SerializeField] private Canvas canvas;
-
+    private Canvas canvas;
+    [SerializeField] private float multiplicadorTamanho;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    public float pontos;
+    public float pontosB;
+    Collider2D[] objetos;
 
     private void Awake() {
 
@@ -34,13 +37,36 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnPointerDown(PointerEventData eventData) {
     }
-    Collider2D[] objetos;
     private void Update()
+    {
+        Detectar();
+        transform.localScale = new Vector3(pontos * multiplicadorTamanho, pontos * multiplicadorTamanho);
+        if(pontos == 0)
+        {
+            Destroy(gameObject);
+        }
+        else if (pontos < 0)
+            pontos = 0;
+
+    }
+    private void Detectar()
     {
         objetos = Physics2D.OverlapCircleAll(transform.position, 1);
         if (objetos.Length > 1)
         {
-            Destroy(this.gameObject);
+            for (int i = 0; i < objetos.Length; i++)
+            {
+                if (objetos[i].tag == "Coronga")
+                {
+                    ClasseHelper.retVida(ref pontos,ref objetos[i].gameObject.GetComponent<Virus1>().pontos);
+                }
+                else if(objetos[i].tag == "GlobuloB" && this.gameObject != objetos[i].gameObject)
+                {             
+                    pontosB = objetos[i].gameObject.GetComponent<DragDrop>().pontos;
+                    ClasseHelper.juntVida(ref pontos, pontosB);
+                    Destroy(objetos[i].gameObject);
+                }
+            }
         }
     }
 }

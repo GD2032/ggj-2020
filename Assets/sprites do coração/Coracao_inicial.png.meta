@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 4d49e789cde93cb409bd0a7da63a6c4e
 TextureImporter:
   internalIDToNameTable:
@@ -14,6 +15,11 @@ TextureImporter:
   - first:
       213: -4777629403548810222
     second: Coracao_inicial_3
+=======
+guid: 6299304ef2219bd47a7217647fd73f46
+TextureImporter:
+  internalIDToNameTable: []
+>>>>>>> 02330cdb8939bf265e668e39fb95c89e1788a671
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -43,7 +49,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: 0
+=======
+    filterMode: -1
+>>>>>>> 02330cdb8939bf265e668e39fb95c89e1788a671
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -52,13 +62,21 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 2
+=======
+  spriteMode: 1
+>>>>>>> 02330cdb8939bf265e668e39fb95c89e1788a671
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
+<<<<<<< HEAD
   spriteBorder: {x: 0, y: 35, z: 34, w: 0}
+=======
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> 02330cdb8939bf265e668e39fb95c89e1788a671
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -75,6 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+<<<<<<< HEAD
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,6 +119,9 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+=======
+    textureCompression: 1
+>>>>>>> 02330cdb8939bf265e668e39fb95c89e1788a671
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,6 +130,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: Coracao_inicial_0
@@ -193,6 +216,9 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+    sprites: []
+>>>>>>> 02330cdb8939bf265e668e39fb95c89e1788a671
     outline: []
     physicsShape: []
     bones: []
