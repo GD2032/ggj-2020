@@ -42,16 +42,22 @@ public class GameControler : MonoBehaviour
             m_Raycaster.Raycast(m_PointerEventData, results);
             foreach (RaycastResult result in results)
             {
-                Debug.Log("Hit " + result.gameObject.name);
-            }
-                //switch (x.collider.gameObject.tag)
-                //{
-                //    case "Respawn":
-                //        print("Finish");
-                //        break;
-                //    case "Finish":
-                //        print("Respawn");
-                //        break;             
+                print(result.gameObject.tag);
+                switch (result.gameObject.tag)
+                {
+                    case "globuloBranco":
+                        goto case "a";
+                    case "tempoLoja":
+                        
+                        goto case "a";
+                    case "freezeLoja":
+                        
+                        goto case "a";
+                    case "a":
+                        result.gameObject.GetComponent<CoolDown>().Clique();
+                        break;
+                }
+            }            
         }
     }
     private void GerarVirus()

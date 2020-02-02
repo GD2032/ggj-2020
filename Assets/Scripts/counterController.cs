@@ -5,36 +5,26 @@ using UnityEngine.UI;
 
 public class counterController : MonoBehaviour
 {
-    private enum lojinha {PararOTempo,menosVirus,maisHemacias,comprarGlobulos};
-    private lojinha loja;
-    private bool pT = false, mV = false, mH = false, cG = false;
     private float pont = 25;     
     [SerializeField]
     private Text texto;
+    [SerializeField]
+    private Animator animado;
 
     void Update() 
     {
+        textin();
+        animação();
+    }
+    void animação() 
+    {
+        animado.SetBool("comprar reparamento", false);
+        animado.SetFloat("pont", pont);
+    }
+    void textin() 
+    {
         texto.text = pont.ToString();
         print(pont);
-    }
-    void compras()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            pT = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.W))
-        {
-            mV = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            mH = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            cG = true;
-        }
     }
     public void cont(float up)
     {

@@ -94,6 +94,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -101,10 +113,10 @@ TextureImporter:
       name: Coracao_tela_inicial_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 36
-        width: 29
-        height: 27
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06afd7941eeeb6341ba28c9e0aa30312
+      spriteID: cd9b918c92a9c3940978dec66a0df191
       internalID: 4153979872970364087
       vertices: []
       indices: 
@@ -122,10 +134,10 @@ TextureImporter:
       name: Coracao_tela_inicial_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 36
-        width: 29
-        height: 27
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 511b572ee28bbbf42a97a3559a2180e7
+      spriteID: 73feb59f5c1a57f4ca39e8dac833ce39
       internalID: -7817105893365228058
       vertices: []
       indices: 
@@ -143,10 +155,10 @@ TextureImporter:
       name: Coracao_tela_inicial_2
       rect:
         serializedVersion: 2
-        x: 3
-        y: 5
-        width: 29
-        height: 27
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c1ecaa925dc5284da592e435c5d9692
+      spriteID: 674b99f910b791544bebaed704bce8a2
       internalID: -6767310423452459073
       vertices: []
       indices: 
@@ -164,10 +176,10 @@ TextureImporter:
       name: Coracao_tela_inicial_3
       rect:
         serializedVersion: 2
-        x: 35
-        y: 5
-        width: 29
-        height: 27
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cc7eb3216ef0d843ac438e87dc03291
+      spriteID: b7af60d883adddd4184546814870ddee
       internalID: 8046352570833786079
       vertices: []
       indices: 

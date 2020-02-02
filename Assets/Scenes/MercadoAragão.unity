@@ -133,9 +133,10 @@ GameObject:
   - component: {fileID: 344227364}
   - component: {fileID: 344227363}
   - component: {fileID: 344227362}
+  - component: {fileID: 344227365}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: canva
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,8 +153,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 732939190}
-  m_Father: {fileID: 611411069}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -220,6 +221,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &344227365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344227360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714cb923a77e3394d818b8b74d621259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hemacia: {fileID: 3878399089950577861, guid: a4a949d9f1b5f9a46b675c8c1c64e0e1, type: 3}
+  virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
+  canvas: {fileID: 344227364}
 --- !u!1 &455722836
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,8 +503,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 344227361}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

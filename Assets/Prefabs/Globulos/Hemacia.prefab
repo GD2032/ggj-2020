@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3878399089950577864}
   - component: {fileID: 3878399089950577863}
   - component: {fileID: 5282106219857737623}
+  - component: {fileID: 1522432454300922074}
   m_Layer: 8
   m_Name: Hemacia
   m_TagString: hema
@@ -61,12 +62,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 6114361156389361141, guid: e89edf262916624468d18058e8163156,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88,14 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28e89ddbc16b2d4b8e2f5448341af60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coracaoposition: {x: 0, y: 0, z: 0}
+  coracaoposition: {x: 0, y: 0}
   speed: 40
-  pontos: 2
   multiplicadorTamanho: 0.2
-  yourposition: {fileID: 3878399089950577862}
-  CoriLayer:
-    serializedVersion: 2
-    m_Bits: 1024
+  pontos: 2
 --- !u!58 &5282106219857737623
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -112,6 +110,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 23
+--- !u!95 &1522432454300922074
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878399089950577861}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8042c9ebdac86b44a3846a2b1985ea0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7093666715362927475
 GameObject:
   m_ObjectHideFlags: 0
