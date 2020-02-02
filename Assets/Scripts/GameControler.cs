@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
 public class GameControler : MonoBehaviour
 {
     [SerializeField] GameObject hemacia, clone;
@@ -13,6 +12,7 @@ public class GameControler : MonoBehaviour
     bool SpawnV, SpawnH, maisHemacias, menosVirus;
     [SerializeField] Canvas canvas;
     float cd;
+    public bool podeUsar;
 
     bool Spawn, poderUm, poderDois, poderTres, poderQuatro, poderCinco;
     GraphicRaycaster m_Raycaster;
@@ -51,32 +51,34 @@ public class GameControler : MonoBehaviour
             m_Raycaster.Raycast(m_PointerEventData, results);
             foreach (RaycastResult result in results)
             {
-                print(result.gameObject.tag);
                 switch (result.gameObject.tag)
-                {
-                    case "globuloLoja":
-                        if (poderUm)
-                            StartCoroutine(Coold(2));
-                        goto case "a";
-                    case "tempoLoja":
-                        menosVirus = true;
-                        SpawnV = false;
-                        StartCoroutine(CooldownMV());
-                        goto case "a";
-                    case "freezeLoja":
-                        goto case "a";
-                    case "aumentoHemaciaLoja":
-                        maisHemacias = true;
-                        SpawnH = true;
-                        StartCoroutine(CooldownMH());
-                        goto case "a";
-                    case "diminuir1":
-                        goto case "a";
-                    case "a":
-                        result.gameObject.GetComponent<CoolDown>().Clique();
-                        break;
+                    {
+                        case "globuloLoja":
+                            if (poderUm)
+                                StartCoroutine(Coold(2));
+                            goto case "a";
+                        case "tempoLoja":
+                            menosVirus = true;
+                            SpawnV = false;
+                            StartCoroutine(CooldownMV());
+                            goto case "a";
+                        case "freezeLoja":
+                            goto case "a";
+                        case "aumentoHemaciaLoja":
+                            maisHemacias = true;
+                            SpawnH = true;
+                            StartCoroutine(CooldownMH());
+                            goto case "a";
+                        case "diminuir1":
+                            goto case "a";
+                        case "a":
+                            result.gameObject.GetComponent<CoolDown>().Clique();
+                            print("a");
+                            break;
+                    }
                 }
-            }
+
+            
         }
     }
     private void GerarVirus()

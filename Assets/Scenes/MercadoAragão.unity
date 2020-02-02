@@ -336,7 +336,6 @@ MonoBehaviour:
   virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
   globuloB: {fileID: 2933480371070914776, guid: 0fac9b4a7bcd42844b3f7d45e27982b6,
     type: 3}
-  globuloB: {fileID: 0}
   spawnPoint: {fileID: 0}
   SpawnV: 0
   SpawnH: 0
@@ -434,7 +433,7 @@ GameObject:
   - component: {fileID: 455722841}
   m_Layer: 5
   m_Name: Poder_4
-  m_TagString: Untagged
+  m_TagString: diminuir1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,7 +521,7 @@ GameObject:
   - component: {fileID: 509694254}
   m_Layer: 5
   m_Name: CoolDown (2)
-  m_TagString: globuloLoja
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1931,7 +1930,6 @@ GameObject:
   - component: {fileID: 1690589957}
   - component: {fileID: 1690589956}
   - component: {fileID: 1690589959}
-  - component: {fileID: 1690589958}
   m_Layer: 5
   m_Name: Poder_5
   m_TagString: aumentoHemaciaLoja
@@ -1997,25 +1995,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690589954}
   m_CullTransparentMesh: 0
---- !u!95 &1690589958
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690589954}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f8042c9ebdac86b44a3846a2b1985ea0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1690589959
 MonoBehaviour:
   m_ObjectHideFlags: 0
