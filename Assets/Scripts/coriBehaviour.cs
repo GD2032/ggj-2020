@@ -16,6 +16,7 @@ public class coriBehaviour : MonoBehaviour
     void Update()
     {
         virus = Physics2D.OverlapCircleAll(transform.position, 25);
+
         if (virus.Length > 1)
         {
             for (int i = 0; i < virus.Length; i++)
