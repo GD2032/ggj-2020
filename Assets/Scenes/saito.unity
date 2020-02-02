@@ -759,6 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f5815098b6080458cb0718b5d2a953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pont: 25
   texto: {fileID: 1257407522}
   animado: {fileID: 437303920}
 --- !u!1 &860958450
