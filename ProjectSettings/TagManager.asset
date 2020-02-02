@@ -13,6 +13,7 @@ TagManager:
   - freezeLoja
   - tempoLoja
   - repararLoja
+  - mercado
   layers:
   - Default
   - TransparentFX
