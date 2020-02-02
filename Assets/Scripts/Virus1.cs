@@ -15,7 +15,7 @@ public class Virus1 : MonoBehaviour
         coracaoposition = transform.parent.position;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         float speedReal = speed * Time.deltaTime;

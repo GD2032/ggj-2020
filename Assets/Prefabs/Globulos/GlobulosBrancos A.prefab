@@ -67,8 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8751839799971213141, guid: 4ace423b13a15ca4e957f1e15acf2a25,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 468d3c8912eb36a4dabee5d166691597, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -104,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplicadorTamanho: 0.2
   pontos: 2
+  raio: 0
   pontosB: 0
 --- !u!58 &370017775851074976
 CircleCollider2D:

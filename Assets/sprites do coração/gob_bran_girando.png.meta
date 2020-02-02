@@ -88,6 +88,8 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+<<<<<<< HEAD
+=======
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,6 +102,7 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+>>>>>>> 5ec686785cb125e5527d2ab5e7f2d9fa05729a6d
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0

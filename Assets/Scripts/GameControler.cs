@@ -1,20 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class GameControler : MonoBehaviour
 {
     [SerializeField] GameObject hemacia;
-    float cdV,cdH;
-    bool SpawnV,SpawnH;
+    float cdV, cdH;
+    bool SpawnV, SpawnH;
     [SerializeField] GameObject virus;
     [SerializeField] Canvas canvas;
     float cd;
     bool Spawn;
+    GraphicRaycaster m_Raycaster;
+    PointerEventData m_PointerEventData;
+    EventSystem m_EventSystem;
 
     void Start()
     {
+        m_Raycaster = GameObject.FindWithTag("canva").GetComponent<GraphicRaycaster>();
+        m_EventSystem = GameObject.FindWithTag("canva").GetComponent<EventSystem>();
         SpawnV = true;
         SpawnH = true;
         cdV = 2f;
@@ -24,6 +30,35 @@ public class GameControler : MonoBehaviour
     void Update()
     {
         GerarVirus();
+        CliqueMouse();
+    }
+    private void CliqueMouse()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            m_PointerEventData = new PointerEventData(m_EventSystem);
+            m_PointerEventData.position = Input.mousePosition;
+            List<RaycastResult> results = new List<RaycastResult>();
+            m_Raycaster.Raycast(m_PointerEventData, results);
+            foreach (RaycastResult result in results)
+            {
+                print(result.gameObject.tag);
+                switch (result.gameObject.tag)
+                {
+                    case "globuloBranco":
+                        goto case "a";
+                    case "tempoLoja":
+                        
+                        goto case "a";
+                    case "freezeLoja":
+                        
+                        goto case "a";
+                    case "a":
+                        result.gameObject.GetComponent<CoolDown>().Clique();
+                        break;
+                }
+            }            
+        }
     }
     private void GerarVirus()
     {
@@ -43,7 +78,7 @@ public class GameControler : MonoBehaviour
     }
     private Vector3 GerarPosicao()
     {
-        int typePosition = Random.Range(0,4);
+        int typePosition = Random.Range(0, 4);
         switch (typePosition)
         {
             case 0:
@@ -59,9 +94,9 @@ public class GameControler : MonoBehaviour
                 return new Vector3(Random.Range(-70, 600), -110);
                 break;
         }
-        return new Vector3(0,0,0);
+        return new Vector3(0, 0, 0);
     }
-    IEnumerator CooldownV(float cd) 
+    IEnumerator CooldownV(float cd)
     {
         yield return new WaitForSeconds(cd);
         SpawnV = true;
@@ -71,5 +106,4 @@ public class GameControler : MonoBehaviour
         yield return new WaitForSeconds(cd);
         SpawnH = true;
     }
-
 }

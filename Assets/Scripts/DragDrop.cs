@@ -9,7 +9,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     [SerializeField] private float multiplicadorTamanho;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-    public float pontos;
+    public float pontos, raio;
     public float pontosB;
     Collider2D[] objetos;
 
@@ -47,11 +47,12 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         }
         else if (pontos < 0)
             pontos = 0;
+        raio = pontos * 3;
 
     }
     private void Detectar()
     {
-        objetos = Physics2D.OverlapCircleAll(transform.position, 1);
+        objetos = Physics2D.OverlapCircleAll(transform.position, raio);
         if (objetos.Length > 1)
         {
             for (int i = 0; i < objetos.Length; i++)
@@ -68,5 +69,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
                 }
             }
         }
+    }
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(transform.position, raio);
     }
 }
