@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class GameControler : MonoBehaviour
 {
-    [SerializeField] GameObject hemacia;
+    [SerializeField] GameObject hemacia, clone;
     float cdV, cdH;
     bool SpawnV, SpawnH;
-    [SerializeField] GameObject virus;
+    [SerializeField] GameObject virus, globuloB, spawnPoint;
     [SerializeField] Canvas canvas;
     float cd;
     bool Spawn;
@@ -45,7 +45,10 @@ public class GameControler : MonoBehaviour
                 print(result.gameObject.tag);
                 switch (result.gameObject.tag)
                 {
-                    case "globuloBranco":
+                    case "globuloLoja":
+                        print("oi");
+                        clone = Instantiate(globuloB, Vector2.zero, Quaternion.identity, canvas.transform);
+                        clone.GetComponent<RectTransform>().anchoredPosition = new Vector3(0,80);
                         goto case "a";
                     case "tempoLoja":
                         
@@ -67,13 +70,13 @@ public class GameControler : MonoBehaviour
     {
         if (SpawnV)
         {
-            Instantiate(virus, GerarPosicao(), Quaternion.identity, canvas.transform);
+            Instantiate(virus, GerarPosicao(), Quaternion.identity, canvas.transform).transform.SetSiblingIndex(2);
             SpawnV = !SpawnV;
             StartCoroutine(CooldownV(cdV));
         }
         if (SpawnH)
         {
-            Instantiate(hemacia, GerarPosicao(), Quaternion.identity, canvas.transform);
+            Instantiate(hemacia, GerarPosicao(), Quaternion.identity, canvas.transform).transform.SetSiblingIndex(2);
             SpawnH = !SpawnH;
             StartCoroutine(CooldownH(cdH));
         }
