@@ -9,7 +9,7 @@ public class Virus1 : MonoBehaviour
     [SerializeField] private float speed, multiplicadorTamanho;
     Collider2D[] objetos;
     public float pontos;
-
+    public bool movimento;
     void Start()
     {
         coracaoposition = transform.parent.position;
@@ -20,7 +20,8 @@ public class Virus1 : MonoBehaviour
     {
         float speedReal = speed * Time.deltaTime;
         //Posiçao e tamanho
-        transform.position = Vector3.MoveTowards(transform.position, coracaoposition, speedReal);
+        if(movimento)
+            transform.position = Vector3.MoveTowards(transform.position, coracaoposition, speedReal);
         transform.localScale = new Vector3(pontos * multiplicadorTamanho, pontos * multiplicadorTamanho);
     }
 }

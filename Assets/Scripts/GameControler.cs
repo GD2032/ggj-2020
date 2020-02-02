@@ -16,7 +16,7 @@ public class GameControler : MonoBehaviour
     public float quantG;
     counterController pontos;
     public bool podeUsar;
-
+    Virus1 doenca;
     bool Spawn, poderUm, poderDois, poderTres, poderQuatro, poderCinco;
     GraphicRaycaster m_Raycaster;
     PointerEventData m_PointerEventData;
@@ -68,6 +68,7 @@ public class GameControler : MonoBehaviour
                         menosVirus = true;
                         SpawnV = false;
                         StartCoroutine(CooldownMV());
+                        pontos.pont -= 10;
                         goto case "a";
                     case "freezeLoja":
                         goto case "a";
@@ -87,7 +88,7 @@ public class GameControler : MonoBehaviour
     }
     private void GerarVirus()
     {
-        if (SpawnV)
+        if (SpawnV && !menosVirus)
         {
             Instantiate(virus, GerarPosicao(), Quaternion.identity, canvas.transform).transform.SetSiblingIndex(2);
             SpawnV = !SpawnV;
@@ -146,7 +147,7 @@ public class GameControler : MonoBehaviour
     }
     IEnumerator CooldownMV()
     {
-        yield return new WaitForSeconds(12f);
+        yield return new WaitForSeconds(10f);
         menosVirus = false;
         SpawnV = true;
     }
