@@ -17,6 +17,7 @@ TagManager:
   - coriIlustracao
   - aumentoHemaciaLoja
   - som
+  - diminuir1
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ public class Virus1 : MonoBehaviour
 
     void Start()
     {
-        coracaoposition = transform.parent.position;
+        coracaoposition = new Vector2(0,6);
     }
 
 
@@ -20,7 +20,7 @@ public class Virus1 : MonoBehaviour
     {
         float speedReal = speed * Time.deltaTime;
         //Posiçao e tamanho
-        transform.position = Vector3.MoveTowards(transform.position, coracaoposition, speedReal);
+        GetComponent<RectTransform>().anchoredPosition = Vector3.MoveTowards(GetComponent<RectTransform>().anchoredPosition, coracaoposition, speedReal);
         transform.localScale = new Vector3(pontos * multiplicadorTamanho, pontos * multiplicadorTamanho);
     }
 }

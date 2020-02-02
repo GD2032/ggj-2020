@@ -13,7 +13,7 @@ public class GameControler : MonoBehaviour
     bool SpawnV, SpawnH, maisHemacias, menosVirus;
     [SerializeField] Canvas canvas;
     float cd;
-    bool Spawn;
+    bool Spawn,poderUM,poderDOIS,poderTRES,poderQUATRO;
     GraphicRaycaster m_Raycaster;
     PointerEventData m_PointerEventData;
     EventSystem m_EventSystem;
@@ -49,9 +49,10 @@ public class GameControler : MonoBehaviour
                 switch (result.gameObject.tag)
                 {
                     case "globuloLoja":
-                        print("oi");
-                        clone = Instantiate(globuloB, Vector2.zero, Quaternion.identity, canvas.transform);
-                        clone.GetComponent<RectTransform>().anchoredPosition = new Vector3(0,80);
+                        if (poderUM) 
+                        {
+                            StartCoroutine(Poder1(2));
+                        }                  
                         goto case "a";
                     case "tempoLoja":
                         menosVirus = true;
@@ -80,14 +81,19 @@ public class GameControler : MonoBehaviour
     {
         if (SpawnV)
         {
-            Instantiate(virus, GerarPosicao(), Quaternion.identity, canvas.transform).transform.SetSiblingIndex(2);
+            clone = Instantiate(virus, GerarPosicao(), Quaternion.identity, canvas.transform);
+            clone.transform.SetSiblingIndex(2);
+            clone.GetComponent<RectTransform>().anchoredPosition = GerarPosicao();
+
             SpawnV = !SpawnV;
             StartCoroutine(CooldownV(cdV));
         }
         if (SpawnH)
         {
-            Instantiate(hemacia, GerarPosicao(), Quaternion.identity, canvas.transform).transform.SetSiblingIndex(2);
-            SpawnH = !SpawnH;
+            clone = Instantiate(hemacia, GerarPosicao(), Quaternion.identity, canvas.transform);
+             clone.transform.SetSiblingIndex(2);
+            clone.GetComponent<RectTransform>().anchoredPosition = GerarPosicao();
+            SpawnH = !SpawnH;   
             StartCoroutine(CooldownH(cdH));
         }
 
@@ -98,16 +104,16 @@ public class GameControler : MonoBehaviour
         switch (typePosition)
         {
             case 0:
-                return new Vector3(-70, Random.Range(450, -110));
+                return new Vector3(-400, Random.Range(-450, 400));
                 break;
             case 1:
-                return new Vector3(600, Random.Range(450, -110));
+                return new Vector3(400, Random.Range(-450, 400));
                 break;
             case 2:
-                return new Vector3(Random.Range(-70, 600), 450);
+                return new Vector3(Random.Range(-300, 300), -400);
                 break;
             case 3:
-                return new Vector3(Random.Range(-70, 600), -110);
+                return new Vector3(Random.Range(-300, 300), 430);
                 break;
         }
         return new Vector3(0, 0, 0);
@@ -140,5 +146,13 @@ public class GameControler : MonoBehaviour
         yield return new WaitForSeconds(12f);
         menosVirus = false;
         SpawnV = true;
+    }
+    IEnumerator Poder1(int cd) 
+    {
+        poderUM = false;
+        clone = Instantiate(globuloB, Vector2.zero, Quaternion.identity, canvas.transform);
+        clone.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 80);
+        yield return new WaitForSeconds(cd);
+        poderUM = true;         
     }
 }
