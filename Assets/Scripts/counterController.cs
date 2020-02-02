@@ -7,12 +7,31 @@ public class counterController : MonoBehaviour
 {
     public float pont = 25, gbQuant = 0;
     [SerializeField]
-    private Text texto,gbtext;
+    private Text texto, gbtext;
     [SerializeField]
     private Animator animado;
-
+    [SerializeField]
+    GameObject[] JOJO;
     void Update() 
     {
+        if (pont > 24 &&  pont < 76)
+        {
+            JOJO[0].SetActive(true);
+            JOJO[1].SetActive(false);
+            JOJO[2].SetActive(false);
+        }
+        else if(pont < 25)
+        {
+            JOJO[0].SetActive(false);
+            JOJO[1].SetActive(false);
+            JOJO[2].SetActive(true);
+        }
+        else if (pont > 75)
+        {
+            JOJO[0].SetActive(false);
+            JOJO[1].SetActive(true);
+            JOJO[2].SetActive(false);
+        }
         textin();
         animação();
     }
