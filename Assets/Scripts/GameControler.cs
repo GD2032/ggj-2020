@@ -54,7 +54,6 @@ public class GameControler : MonoBehaviour
                         menosVirus = true;
                         SpawnV = false;
                         StartCoroutine(CooldownMV());
-                        break;
                         goto case "a";
                     case "freezeLoja":
                         
@@ -63,8 +62,10 @@ public class GameControler : MonoBehaviour
                         maisHemacias = true;
                         SpawnH = true;
                         StartCoroutine(CooldownMH());
-                        break;
                         goto case "a";
+                    case "RepararCoriLoja":
+
+                        break;
                     case "a":
                         result.gameObject.GetComponent<CoolDown>().Clique();
                         break;
