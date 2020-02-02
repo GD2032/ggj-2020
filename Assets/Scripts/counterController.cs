@@ -19,18 +19,28 @@ public class counterController : MonoBehaviour
             JOJO[0].SetActive(true);
             JOJO[1].SetActive(false);
             JOJO[2].SetActive(false);
+            JOJO[3].SetActive(false);
         }
-        else if(pont < 25)
+        else if(pont < 25 && pont > 10)
         {
             JOJO[0].SetActive(false);
             JOJO[1].SetActive(false);
             JOJO[2].SetActive(true);
+            JOJO[3].SetActive(false);
+        }
+        else if(pont < 11) 
+        {
+            JOJO[0].SetActive(false);
+            JOJO[1].SetActive(false);
+            JOJO[3].SetActive(true);
+            JOJO[2].SetActive(false);
         }
         else if (pont > 75)
         {
             JOJO[0].SetActive(false);
             JOJO[1].SetActive(true);
             JOJO[2].SetActive(false);
+            JOJO[3].SetActive(false);
         }
         textin();
         animação();
