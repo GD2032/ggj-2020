@@ -14,8 +14,8 @@ public class CoolDown : MonoBehaviour
        transform.GetChild(0).GetComponent<Image>().fillAmount = 0;
         switch (transform.tag)
         {
-            case "globuloBranco":
-                tempoCd = 5;
+            case "globuloLoja":
+                tempoCd = 2;
                 break;
             case "tempoLoja":
                 tempoCd = 10;
@@ -23,6 +23,14 @@ public class CoolDown : MonoBehaviour
             case "freezeLoja":
                 tempoCd = 20;
                 break;
+            case "aumentoHemaciaLoja":
+                tempoCd = 30;
+                break;
+            case "diminuir1":
+                tempoCd = 25;
+                break;
+                
+
 
         }
     }

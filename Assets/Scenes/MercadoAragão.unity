@@ -331,11 +331,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hemacia: {fileID: 3878399089950577861, guid: a4a949d9f1b5f9a46b675c8c1c64e0e1, type: 3}
+  clone: {fileID: 0}
+  virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
+  globuloB: {fileID: 2933480371070914776, guid: 0fac9b4a7bcd42844b3f7d45e27982b6,
+    type: 3}
+  spawnPoint: {fileID: 0}
   SpawnV: 0
   SpawnH: 0
   maisHemacias: 0
   menosVirus: 0
-  virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
   canvas: {fileID: 344227364}
 --- !u!1 &370178831
 GameObject:
@@ -828,7 +832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aa0a9892b9d7f43ba76af9ecee478f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  podeClicar: 1
+  podeClicar: 0
 --- !u!1 &935582609
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +921,6 @@ GameObject:
   - component: {fileID: 968429973}
   - component: {fileID: 968429975}
   - component: {fileID: 968429974}
-  - component: {fileID: 968429976}
   - component: {fileID: 968429977}
   - component: {fileID: 968429978}
   m_Layer: 5
@@ -984,32 +987,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968429972}
   m_CullTransparentMesh: 0
---- !u!61 &968429976
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968429972}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 66.72454, y: 52.56682}
-  m_EdgeRadius: 0
 --- !u!114 &968429977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,7 +1008,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968429972}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 996f725f59bf48f458c4e31f8c216575, type: 2}
   m_CullingMode: 0
@@ -1732,7 +1709,7 @@ GameObject:
   - component: {fileID: 1607405915}
   m_Layer: 5
   m_Name: CoolDown (3)
-  m_TagString: globuloLoja
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1896,7 +1873,7 @@ GameObject:
   - component: {fileID: 1690589958}
   m_Layer: 5
   m_Name: Poder_5
-  m_TagString: Untagged
+  m_TagString: aumentoHemaciaLoja
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1919,7 +1896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74.8, y: -150.61}
+  m_AnchoredPosition: {x: 73.3, y: -152.45}
   m_SizeDelta: {x: 53.62, y: 48.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1690589956
@@ -2312,7 +2289,7 @@ GameObject:
   - component: {fileID: 2136023462}
   m_Layer: 5
   m_Name: CoolDown
-  m_TagString: globuloLoja
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

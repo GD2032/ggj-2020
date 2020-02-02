@@ -13,7 +13,8 @@ public class GameControler : MonoBehaviour
     bool SpawnV, SpawnH, maisHemacias, menosVirus;
     [SerializeField] Canvas canvas;
     float cd;
-    bool Spawn;
+
+    bool Spawn, poderUm, poderDois, poderTres, poderQuatro, poderCinco;
     GraphicRaycaster m_Raycaster;
     PointerEventData m_PointerEventData;
     EventSystem m_EventSystem;
@@ -26,6 +27,11 @@ public class GameControler : MonoBehaviour
         SpawnH = true;
         maisHemacias = false;
         menosVirus = false;
+        poderCinco = true;
+        poderQuatro = true;
+        poderTres = true;
+        poderDois = true;
+        poderUm = true;
         cdV = 2f;
         cdH = 9f;
     }
@@ -49,30 +55,30 @@ public class GameControler : MonoBehaviour
                 switch (result.gameObject.tag)
                 {
                     case "globuloLoja":
-                        print("oi");
-                        clone = Instantiate(globuloB, Vector2.zero, Quaternion.identity, canvas.transform);
-                        clone.GetComponent<RectTransform>().anchoredPosition = new Vector3(0,80);
+                        if (poderUm)
+                            StartCoroutine(Coold(2));
                         goto case "a";
                     case "tempoLoja":
                         menosVirus = true;
                         SpawnV = false;
                         StartCoroutine(CooldownMV());
-                        break;
                         goto case "a";
                     case "freezeLoja":
-                        
                         goto case "a";
                     case "aumentoHemaciaLoja":
                         maisHemacias = true;
                         SpawnH = true;
                         StartCoroutine(CooldownMH());
-                        break;
                         goto case "a";
+                    case "diminuir1":
+                        goto case "a";
+
+                    goto case "a";
                     case "a":
                         result.gameObject.GetComponent<CoolDown>().Clique();
                         break;
                 }
-            }            
+            }
         }
     }
     private void GerarVirus()
@@ -129,7 +135,7 @@ public class GameControler : MonoBehaviour
             SpawnH = true;
         }
     }
-    IEnumerator CooldownMH() 
+    IEnumerator CooldownMH()
     {
         yield return new WaitForSeconds(6.5f);
         maisHemacias = false;
@@ -139,5 +145,19 @@ public class GameControler : MonoBehaviour
         yield return new WaitForSeconds(12f);
         menosVirus = false;
         SpawnV = true;
+    }
+    IEnumerator Coold(int cd)
+    {
+        poderUm = false;
+        clone = Instantiate(globuloB, Vector2.zero, Quaternion.identity, canvas.transform);
+        clone.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 80);
+        yield return new WaitForSeconds(cd);
+        poderUm = true;
+    }
+    IEnumerator Cold2(int cd)
+    {
+        poderDois = false;
+        yield return new WaitForSeconds(cd);
+        poderDois = true;
     }
 }
