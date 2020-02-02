@@ -334,12 +334,9 @@ MonoBehaviour:
   hemacia: {fileID: 3878399089950577861, guid: a4a949d9f1b5f9a46b675c8c1c64e0e1, type: 3}
   clone: {fileID: 0}
   virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
-<<<<<<< HEAD
   globuloB: {fileID: 2933480371070914776, guid: 0fac9b4a7bcd42844b3f7d45e27982b6,
     type: 3}
-=======
   globuloB: {fileID: 0}
->>>>>>> 5d71ec5790d9f7639b2d8737a0f932a390bc7151
   spawnPoint: {fileID: 0}
   SpawnV: 0
   SpawnH: 0

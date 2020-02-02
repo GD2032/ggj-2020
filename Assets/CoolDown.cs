@@ -27,20 +27,12 @@ public class CoolDown : MonoBehaviour
             case "freezeLoja":
                 tempoCd = 20;
                 break;
-<<<<<<< HEAD
             case "aumentoHemaciaLoja":
                 tempoCd = 30;
                 break;
             case "diminuir1":
                 tempoCd = 25;
                 break;
-                
-
-=======
-            case "repararCoriLoja":
-
-                break;
->>>>>>> 5d71ec5790d9f7639b2d8737a0f932a390bc7151
 
         }
         coriSprite = coriIlustracao.GetComponent<Image>();
