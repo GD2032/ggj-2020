@@ -8,8 +8,9 @@ public class GameControler : MonoBehaviour
 {
     [SerializeField] GameObject hemacia, clone;
     float cdV, cdH;
-    bool SpawnV, SpawnH;
     [SerializeField] GameObject virus, globuloB, spawnPoint;
+    [SerializeField]
+    bool SpawnV, SpawnH, maisHemacias, menosVirus;
     [SerializeField] Canvas canvas;
     float cd;
     bool Spawn;
@@ -23,6 +24,8 @@ public class GameControler : MonoBehaviour
         m_EventSystem = GameObject.FindWithTag("canva").GetComponent<EventSystem>();
         SpawnV = true;
         SpawnH = true;
+        maisHemacias = false;
+        menosVirus = false;
         cdV = 2f;
         cdH = 9f;
     }
@@ -51,13 +54,19 @@ public class GameControler : MonoBehaviour
                         clone.GetComponent<RectTransform>().anchoredPosition = new Vector3(0,80);
                         goto case "a";
                     case "tempoLoja":
-                        
+                        menosVirus = true;
+                        SpawnV = false;
+                        StartCoroutine(CooldownMV());
+                        break;
                         goto case "a";
                     case "freezeLoja":
                         
                         goto case "a";
                     case "aumentoHemaciaLoja":
-
+                        maisHemacias = true;
+                        SpawnH = true;
+                        StartCoroutine(CooldownMH());
+                        break;
                         goto case "a";
                     case "a":
                         result.gameObject.GetComponent<CoolDown>().Clique();
@@ -109,7 +118,26 @@ public class GameControler : MonoBehaviour
     }
     IEnumerator CooldownH(float cd)
     {
-        yield return new WaitForSeconds(cd);
-        SpawnH = true;
+        if (!maisHemacias)
+        {
+            yield return new WaitForSeconds(cd);
+            SpawnH = true;
+        }
+        else if (maisHemacias)
+        {
+            yield return new WaitForSeconds(3f);
+            SpawnH = true;
+        }
+    }
+    IEnumerator CooldownMH() 
+    {
+        yield return new WaitForSeconds(6.5f);
+        maisHemacias = false;
+    }
+    IEnumerator CooldownMV()
+    {
+        yield return new WaitForSeconds(12f);
+        menosVirus = false;
+        SpawnV = true;
     }
 }

@@ -7,8 +7,11 @@ MonoImporter:
   - hemacia: {fileID: 3878399089950577861, guid: a4a949d9f1b5f9a46b675c8c1c64e0e1,
       type: 3}
   - virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
+<<<<<<< HEAD
   - globuloB: {fileID: 2933480371070914776, guid: 0fac9b4a7bcd42844b3f7d45e27982b6,
       type: 3}
+=======
+>>>>>>> b566d43bd0a01678512547759b8b520c807cc336
   - canvas: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
