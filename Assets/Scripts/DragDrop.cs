@@ -76,4 +76,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         Gizmos.DrawSphere(transform.position, raio);
     }
+    private void OnDestroy()
+    {
+        canvas.GetComponent<GameControler>().quantG--;
+    }
 }
