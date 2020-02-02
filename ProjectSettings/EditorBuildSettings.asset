@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/MercadoArag\xE3o.unity"
     guid: dae4fde6293eb7142a4ebc50b59efdcf
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 51603567bbc72c943aeeec5f173cefde
   m_configObjects: {}

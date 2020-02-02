@@ -35,7 +35,11 @@ public class MenuBehaviour : MonoBehaviour
         Fade();
         StartCoroutine(CoolDown(coolDown,cenas[2]));
     }
-
+    public void BotaoCredito()
+    {
+        Fade();
+        StartCoroutine(CoolDown(coolDown,cenas[1]));
+    }
     
     IEnumerator CoolDown(int cd,string cena) 
     {
