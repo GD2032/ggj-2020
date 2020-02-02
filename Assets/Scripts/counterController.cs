@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class counterController : MonoBehaviour
 {
-    private float pont = 25;     
+    public float pont = 25;     
     [SerializeField]
     private Text texto;
     [SerializeField]
