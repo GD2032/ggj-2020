@@ -3,7 +3,11 @@ guid: 714cb923a77e3394d818b8b74d621259
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hemacia: {fileID: 3878399089950577861, guid: a4a949d9f1b5f9a46b675c8c1c64e0e1,
+      type: 3}
+  - virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
+  - canvas: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

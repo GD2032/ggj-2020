@@ -12,6 +12,7 @@ TagManager:
   - globuloLoja
   - freezeLoja
   - tempoLoja
+  - repararLoja
   layers:
   - Default
   - TransparentFX
