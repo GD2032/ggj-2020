@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
 public class GameControler : MonoBehaviour
 {
     [SerializeField] GameObject hemacia, clone;
@@ -16,6 +15,7 @@ public class GameControler : MonoBehaviour
     float cd;
     public float quantG;
     counterController pontos;
+    public bool podeUsar;
 
     bool Spawn, poderUm, poderDois, poderTres, poderQuatro, poderCinco;
     GraphicRaycaster m_Raycaster;
@@ -58,7 +58,6 @@ public class GameControler : MonoBehaviour
             m_Raycaster.Raycast(m_PointerEventData, results);
             foreach (RaycastResult result in results)
             {
-                print(result.gameObject.tag);
                 switch (result.gameObject.tag)
                 {
                     case "globuloLoja":
@@ -78,7 +77,7 @@ public class GameControler : MonoBehaviour
                         StartCoroutine(CooldownMH());
                         goto case "a";
                     case "diminuir1":
-                    goto case "a";
+                        goto case "a";
                     case "a":
                         result.gameObject.GetComponent<CoolDown>().Clique();
                         break;

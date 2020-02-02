@@ -41,12 +41,14 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         Detectar();
         transform.localScale = new Vector3(pontos * multiplicadorTamanho, pontos * multiplicadorTamanho);
-        if(pontos == 0)
+        if (pontos == 0)
         {
             Destroy(gameObject);
         }
         else if (pontos < 0)
             pontos = 0;
+        else if (pontos > 5)
+            pontos = 5;
         raio = pontos * 3;
 
     }

@@ -32,7 +32,7 @@ public class CoolDown : MonoBehaviour
                 break;
             case "diminuir1":
                 tempoCd = 25;
-                break;
+                break;  
 
         }
         coriSprite = coriIlustracao.GetComponent<Image>();
@@ -58,7 +58,7 @@ public class CoolDown : MonoBehaviour
         if(podeClicar)
         {
             podeClicar = !podeClicar;
-            cd = tempoCd;    
+            cd = tempoCd;   
         }
     }
 }
