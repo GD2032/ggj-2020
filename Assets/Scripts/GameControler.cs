@@ -71,5 +71,9 @@ public class GameControler : MonoBehaviour
         yield return new WaitForSeconds(cd);
         SpawnH = true;
     }
+    void OnDrawGizmos()
+    {
+       
+    }
 
 }
