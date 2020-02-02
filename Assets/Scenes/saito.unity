@@ -479,6 +479,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hemacia: {fileID: 3878399089950577861, guid: a4a949d9f1b5f9a46b675c8c1c64e0e1, type: 3}
+  SpawnV: 0
+  SpawnH: 0
+  maisHemacias: 1
+  menosVirus: 0
   virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
   canvas: {fileID: 1565289127}
 --- !u!61 &118597827

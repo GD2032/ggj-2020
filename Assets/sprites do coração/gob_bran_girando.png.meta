@@ -88,8 +88,6 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
-<<<<<<< HEAD
-=======
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +100,6 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
->>>>>>> 5ec686785cb125e5527d2ab5e7f2d9fa05729a6d
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,18 +113,18 @@ TextureImporter:
       name: gob_bran_girando_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 3
+        y: 36
+        width: 25
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 427317150cbbe6441bd97c9d15dc8a9f
+      spriteID: 205a837340a677842a1b3247f945cd8f
       internalID: -8751839799971213141
       vertices: []
       indices: 
@@ -137,18 +134,18 @@ TextureImporter:
       name: gob_bran_girando_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 35
+        y: 35
+        width: 25
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3a88ce77c972c84fb99fd54e6d6af56
+      spriteID: 4b456bfcd5ab1c54dbce45b849c5255d
       internalID: -3967291875686288695
       vertices: []
       indices: 
@@ -158,18 +155,18 @@ TextureImporter:
       name: gob_bran_girando_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 4
+        y: 3
+        width: 25
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edf14d266de39004ba5bca254046c8d5
+      spriteID: 931cfd603d2a9e44ca8953fe6b6da2f1
       internalID: -1279018330664235236
       vertices: []
       indices: 
@@ -179,18 +176,18 @@ TextureImporter:
       name: gob_bran_girando_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 36
+        y: 4
+        width: 25
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da5c14c5af9c05c49a4e1ad903f7033c
+      spriteID: a187662e0ceec87429d1fb2a955b97b7
       internalID: 703363205205866182
       vertices: []
       indices: 
