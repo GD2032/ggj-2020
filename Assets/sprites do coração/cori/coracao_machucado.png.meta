@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 111a667c572d89a44b450a86010a8b1a
+guid: 6a50c15fee19e424396b8e4935bc0358
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2506476911195630276
-    second: virus_1_0
+      213: -1613235253199554522
+    second: coracao_machucado_0
   - first:
-      213: -7691722865034199423
-    second: virus_1_1
+      213: -2677112088553332649
+    second: coracao_machucado_1
   - first:
-      213: -7702152972058359825
-    second: virus_1_2
+      213: -87379011487318848
+    second: coracao_machucado_2
   - first:
-      213: 3931180478081660337
-    second: virus_1_3
+      213: -8925316117380644477
+    second: coracao_machucado_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,85 +110,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: virus_1_0
+      name: coracao_machucado_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 36
-        width: 24
-        height: 24
+        x: 0
+        y: 35
+        width: 32
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99f8570873a30e6479a4eab448ddbc35
-      internalID: -2506476911195630276
+      spriteID: 875dbf38461d36e4e91593c6446bec66
+      internalID: -1613235253199554522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virus_1_1
+      name: coracao_machucado_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 36
-        width: 22
-        height: 24
+        x: 32
+        y: 35
+        width: 32
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec2927fb3369b2845a538361b746af2e
-      internalID: -7691722865034199423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: virus_1_2
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 4
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 997afa62a09af09458bf664eae3b1396
-      internalID: -7702152972058359825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: virus_1_3
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 4
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97a556c2222661c40be07a3e7e7f32d7
-      internalID: 3931180478081660337
+      spriteID: 566f0e6c5559d9043a8f6603b3d995d1
+      internalID: -2677112088553332649
       vertices: []
       indices: 
       edges: []

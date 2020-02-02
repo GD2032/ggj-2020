@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 111a667c572d89a44b450a86010a8b1a
+guid: b7b39dd430e9d7c47b46517d0b53306a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2506476911195630276
-    second: virus_1_0
+      213: 4153979872970364087
+    second: Coracao_tela_inicial_0
   - first:
-      213: -7691722865034199423
-    second: virus_1_1
+      213: -7817105893365228058
+    second: Coracao_tela_inicial_1
   - first:
-      213: -7702152972058359825
-    second: virus_1_2
+      213: -6767310423452459073
+    second: Coracao_tela_inicial_2
   - first:
-      213: 3931180478081660337
-    second: virus_1_3
+      213: 8046352570833786079
+    second: Coracao_tela_inicial_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: virus_1_0
+      name: Coracao_tela_inicial_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 36
-        width: 24
-        height: 24
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99f8570873a30e6479a4eab448ddbc35
-      internalID: -2506476911195630276
+      spriteID: cd9b918c92a9c3940978dec66a0df191
+      internalID: 4153979872970364087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virus_1_1
+      name: Coracao_tela_inicial_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 36
-        width: 22
-        height: 24
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec2927fb3369b2845a538361b746af2e
-      internalID: -7691722865034199423
+      spriteID: 73feb59f5c1a57f4ca39e8dac833ce39
+      internalID: -7817105893365228058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virus_1_2
+      name: Coracao_tela_inicial_2
       rect:
         serializedVersion: 2
-        x: 5
-        y: 4
-        width: 22
-        height: 24
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 997afa62a09af09458bf664eae3b1396
-      internalID: -7702152972058359825
+      spriteID: 674b99f910b791544bebaed704bce8a2
+      internalID: -6767310423452459073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virus_1_3
+      name: Coracao_tela_inicial_3
       rect:
         serializedVersion: 2
-        x: 37
-        y: 4
-        width: 22
-        height: 24
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97a556c2222661c40be07a3e7e7f32d7
-      internalID: 3931180478081660337
+      spriteID: b7af60d883adddd4184546814870ddee
+      internalID: 8046352570833786079
       vertices: []
       indices: 
       edges: []

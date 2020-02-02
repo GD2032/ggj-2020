@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class coriBehaviour : MonoBehaviour
 {
-    [SerializeField]
     private Collider2D[] virus;
     private Collider2D[] Hemacia;
 
