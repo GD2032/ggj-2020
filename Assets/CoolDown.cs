@@ -22,7 +22,7 @@ public class CoolDown : MonoBehaviour
                 tempoCd = 2;
                 break;
             case "tempoLoja":
-                tempoCd = 10;
+                tempoCd = 20;
                 break;
             case "freezeLoja":
                 tempoCd = 20;

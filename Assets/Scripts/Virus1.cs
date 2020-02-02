@@ -9,7 +9,7 @@ public class Virus1 : MonoBehaviour
     [SerializeField] private float speed, multiplicadorTamanho;
     Collider2D[] objetos;
     public float pontos;
-
+    public bool movimento;
     void Start()
     {
         coracaoposition = new Vector2(0,6);
