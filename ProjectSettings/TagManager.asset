@@ -14,13 +14,10 @@ TagManager:
   - tempoLoja
   - repararLoja
   - mercado
-<<<<<<< HEAD
-  - aumentoHemaciaLoja
-=======
+  - som
   - coriIlustracao
   - aumentoHemaciaLoja
-  - som
->>>>>>> 5d71ec5790d9f7639b2d8737a0f932a390bc7151
+  - diminuir1
   layers:
   - Default
   - TransparentFX

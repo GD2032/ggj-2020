@@ -9,10 +9,13 @@ public class GameControler : MonoBehaviour
     [SerializeField] GameObject hemacia, clone;
     float cdV, cdH;
     [SerializeField] GameObject virus, globuloB, spawnPoint;
+    private Collider2D[] irus;
     [SerializeField]
     bool SpawnV, SpawnH, maisHemacias, menosVirus;
     [SerializeField] Canvas canvas;
     float cd;
+    public float quantG;
+    counterController pontos;
 
     bool Spawn, poderUm, poderDois, poderTres, poderQuatro, poderCinco;
     GraphicRaycaster m_Raycaster;
@@ -21,6 +24,8 @@ public class GameControler : MonoBehaviour
 
     void Start()
     {
+        pontos = GameObject.FindGameObjectWithTag("pont").GetComponent<counterController>();
+        quantG = 5;
         m_Raycaster = GameObject.FindWithTag("canva").GetComponent<GraphicRaycaster>();
         m_EventSystem = GameObject.FindWithTag("canva").GetComponent<EventSystem>();
         SpawnV = true;
@@ -38,6 +43,8 @@ public class GameControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pontos.gbQuant = quantG;
+        irus = Physics2D.OverlapCircleAll(transform.position, 1);
         GerarVirus();
         CliqueMouse();
     }
@@ -55,7 +62,7 @@ public class GameControler : MonoBehaviour
                 switch (result.gameObject.tag)
                 {
                     case "globuloLoja":
-                        if (poderUm)
+                        if (poderUm && quantG <= 10)
                             StartCoroutine(Coold(2));
                         goto case "a";
                     case "tempoLoja":
@@ -71,7 +78,7 @@ public class GameControler : MonoBehaviour
                         StartCoroutine(CooldownMH());
                         goto case "a";
                     case "diminuir1":
-                        goto case "a";
+                    goto case "a";
                     case "a":
                         result.gameObject.GetComponent<CoolDown>().Clique();
                         break;
@@ -149,6 +156,7 @@ public class GameControler : MonoBehaviour
         poderUm = false;
         clone = Instantiate(globuloB, Vector2.zero, Quaternion.identity, canvas.transform);
         clone.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 80);
+        quantG++;
         yield return new WaitForSeconds(cd);
         poderUm = true;
     }
