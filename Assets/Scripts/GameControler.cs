@@ -70,10 +70,16 @@ public class GameControler : MonoBehaviour
                         SpawnH = true;
                         StartCoroutine(CooldownMH());
                         goto case "a";
+<<<<<<< HEAD
                     case "diminuir1":
                         goto case "a";
 
                     goto case "a";
+=======
+                    case "repararCoriLoja":
+
+                        break;
+>>>>>>> 5d71ec5790d9f7639b2d8737a0f932a390bc7151
                     case "a":
                         result.gameObject.GetComponent<CoolDown>().Clique();
                         break;
