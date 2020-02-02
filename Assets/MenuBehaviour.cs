@@ -8,7 +8,7 @@ public class MenuBehaviour : MonoBehaviour
     UI UI;
     int coolDown = 2;
     bool ativado = true;
-    string[] cenas = new string[] { "SampleScene", "Creditos","saito" };
+    string[] cenas = new string[] { "SampleScene", "Creditos","saito", "MercadoAragão" };
     public GameObject som;
 
     private void Awake() 
@@ -27,7 +27,7 @@ public class MenuBehaviour : MonoBehaviour
     public void BotaoInciar() 
     {
         Fade();
-        StartCoroutine(CoolDown(coolDown,cenas[0]));
+        StartCoroutine(CoolDown(coolDown,cenas[3]));
         Destroy(som);
     }
     public void BotaoDiverso()
