@@ -14,9 +14,12 @@ TagManager:
   - tempoLoja
   - repararLoja
   - mercado
-  - coriIlustracao
   - aumentoHemaciaLoja
   - som
+<<<<<<< HEAD
+=======
+  - coriIlustracao
+>>>>>>> e08674796d523a01d6f97e395527871152725ac5
   - diminuir1
   layers:
   - Default

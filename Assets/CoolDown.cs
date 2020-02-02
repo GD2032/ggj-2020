@@ -19,7 +19,7 @@ public class CoolDown : MonoBehaviour
         switch (transform.tag)
         {
             case "globuloLoja":
-                tempoCd = 5;
+                tempoCd = 2;
                 break;
             case "tempoLoja":
                 tempoCd = 10;
@@ -27,14 +27,12 @@ public class CoolDown : MonoBehaviour
             case "freezeLoja":
                 tempoCd = 20;
                 break;
-            case "aumentarHemaciaLoja":
+            case "aumentoHemaciaLoja":
                 tempoCd = 30;
                 break;
             case "diminuir1":
-                break;
-            case "repararCoriLoja":
-
-                break;
+                tempoCd = 25;
+                break;  
 
         }
         coriSprite = coriIlustracao.GetComponent<Image>();
@@ -60,7 +58,7 @@ public class CoolDown : MonoBehaviour
         if(podeClicar)
         {
             podeClicar = !podeClicar;
-            cd = tempoCd;    
+            cd = tempoCd;   
         }
     }
 }

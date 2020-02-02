@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
 public class GameControler : MonoBehaviour
 {
     [SerializeField] GameObject hemacia, clone;
@@ -13,7 +12,8 @@ public class GameControler : MonoBehaviour
     bool SpawnV, SpawnH, maisHemacias, menosVirus;
     [SerializeField] Canvas canvas;
     float cd;
-    bool Spawn,poderUM,poderDOIS,poderTRES,poderQUATRO;
+    public bool podeUsar;
+    bool Spawn, poderUm, poderDois, poderTres, poderQuatro, poderCinco;
     GraphicRaycaster m_Raycaster;
     PointerEventData m_PointerEventData;
     EventSystem m_EventSystem;
@@ -26,6 +26,11 @@ public class GameControler : MonoBehaviour
         SpawnH = true;
         maisHemacias = false;
         menosVirus = false;
+        poderCinco = true;
+        poderQuatro = true;
+        poderTres = true;
+        poderDois = true;
+        poderUm = true;
         cdV = 2f;
         cdH = 9f;
     }
@@ -45,36 +50,35 @@ public class GameControler : MonoBehaviour
             m_Raycaster.Raycast(m_PointerEventData, results);
             foreach (RaycastResult result in results)
             {
-                print(result.gameObject.tag);
                 switch (result.gameObject.tag)
-                {
-                    case "globuloLoja":
-                        if (poderUM) 
-                        {
-                            StartCoroutine(Poder1(2));
-                        }                  
-                        goto case "a";
-                    case "tempoLoja":
-                        menosVirus = true;
-                        SpawnV = false;
-                        StartCoroutine(CooldownMV());
-                        goto case "a";
-                    case "freezeLoja":
-                        
-                        goto case "a";
-                    case "aumentoHemaciaLoja":
-                        maisHemacias = true;
-                        SpawnH = true;
-                        StartCoroutine(CooldownMH());
-                        goto case "a";
-                    case "repararCoriLoja":
 
-                        break;
-                    case "a":
-                        result.gameObject.GetComponent<CoolDown>().Clique();
-                        break;
+                    {
+                        case "globuloLoja":
+                            if (poderUm)
+                                StartCoroutine(Coold(2));
+                            goto case "a";
+                        case "tempoLoja":
+                            menosVirus = true;
+                            SpawnV = false;
+                            StartCoroutine(CooldownMV());
+                            goto case "a";
+                        case "freezeLoja":
+                            goto case "a";
+                        case "aumentoHemaciaLoja":
+                            maisHemacias = true;
+                            SpawnH = true;
+                            StartCoroutine(CooldownMH());
+                            goto case "a";
+                        case "diminuir1":
+                            goto case "a";
+                        case "a":
+                            result.gameObject.GetComponent<CoolDown>().Clique();
+                            print("a");
+                            break;
+                    }
                 }
-            }            
+
+            
         }
     }
     private void GerarVirus()
@@ -98,6 +102,7 @@ public class GameControler : MonoBehaviour
         }
 
     }
+
     private Vector3 GerarPosicao()
     {
         int typePosition = Random.Range(0, 4);
@@ -136,7 +141,7 @@ public class GameControler : MonoBehaviour
             SpawnH = true;
         }
     }
-    IEnumerator CooldownMH() 
+    IEnumerator CooldownMH()
     {
         yield return new WaitForSeconds(6.5f);
         maisHemacias = false;
@@ -147,12 +152,13 @@ public class GameControler : MonoBehaviour
         menosVirus = false;
         SpawnV = true;
     }
-    IEnumerator Poder1(int cd) 
+
+    IEnumerator Coold(int cd)
     {
-        poderUM = false;
+        poderUm = false;
         clone = Instantiate(globuloB, Vector2.zero, Quaternion.identity, canvas.transform);
         clone.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 80);
         yield return new WaitForSeconds(cd);
-        poderUM = true;         
+        poderUm = true;
     }
 }
