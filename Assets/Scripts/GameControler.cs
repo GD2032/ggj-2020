@@ -53,6 +53,9 @@ public class GameControler : MonoBehaviour
                     case "freezeLoja":
                         
                         goto case "a";
+                    case "aumentoHemaciaLoja":
+
+                        goto case "a";
                     case "a":
                         result.gameObject.GetComponent<CoolDown>().Clique();
                         break;
