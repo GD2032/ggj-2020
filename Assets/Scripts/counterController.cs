@@ -24,7 +24,6 @@ public class counterController : MonoBehaviour
     void textin() 
     {
         texto.text = pont.ToString();
-        print(pont);
     }
     public void cont(float up)
     {

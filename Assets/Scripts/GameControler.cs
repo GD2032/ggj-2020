@@ -66,7 +66,7 @@ public class GameControler : MonoBehaviour
                         SpawnH = true;
                         StartCoroutine(CooldownMH());
                         goto case "a";
-                    case "RepararCoriLoja":
+                    case "repararCoriLoja":
 
                         break;
                     case "a":

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 88768401}
   m_Layer: 5
   m_Name: Poder_5 (1)
-  m_TagString: Untagged
+  m_TagString: coriIlustracao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -331,11 +331,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hemacia: {fileID: 3878399089950577861, guid: a4a949d9f1b5f9a46b675c8c1c64e0e1, type: 3}
+  clone: {fileID: 0}
+  virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
+  globuloB: {fileID: 0}
+  spawnPoint: {fileID: 0}
   SpawnV: 0
   SpawnH: 0
   maisHemacias: 0
   menosVirus: 0
-  virus: {fileID: 8965316052446316566, guid: 791f0c7d56fa6644c9d5261b3f6b3498, type: 3}
   canvas: {fileID: 344227364}
 --- !u!1 &370178831
 GameObject:
@@ -1203,7 +1206,6 @@ GameObject:
   - component: {fileID: 1311438813}
   - component: {fileID: 1311438812}
   - component: {fileID: 1311438815}
-  - component: {fileID: 1311438818}
   m_Layer: 5
   m_Name: Coracao
   m_TagString: pont
@@ -1339,18 +1341,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311438810}
   m_CullTransparentMesh: 0
---- !u!114 &1311438818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311438810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50fb9aec79ef7b469d075c8d894bc50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1375960913
 GameObject:
   m_ObjectHideFlags: 0
