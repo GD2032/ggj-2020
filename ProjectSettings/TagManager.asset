@@ -9,6 +9,9 @@ TagManager:
   - hema
   - Coronga
   - GlobuloB
+  - globuloLoja
+  - freezeLoja
+  - tempoLoja
   layers:
   - Default
   - TransparentFX
