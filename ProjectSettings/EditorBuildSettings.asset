@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/CenaArag\xE3o.unity"
     guid: 53c8307f3e215544d8efbbdcfe588ee8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/saito.unity
     guid: 1c3e832595447de40b37db75f378d793
+  - enabled: 1
+    path: "Assets/Scenes/MercadoArag\xE3o.unity"
+    guid: dae4fde6293eb7142a4ebc50b59efdcf
   m_configObjects: {}
