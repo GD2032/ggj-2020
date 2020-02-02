@@ -5,11 +5,6 @@ using UnityEngine.EventSystems;
 
 public class Virus1 : MonoBehaviour
 { 
-    [SerializeField]
-    RectTransform yourposition;
-    [SerializeField]
-    private LayerMask CoriLayer;
-    private Collider2D[] coracao;
     [SerializeField] private Vector2 coracaoposition;
     [SerializeField] private float speed, multiplicadorTamanho;
     Collider2D[] objetos;
@@ -23,8 +18,6 @@ public class Virus1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coracao = Physics2D.OverlapCircleAll(transform.position, 1, CoriLayer);
-
         float speedReal = speed * Time.deltaTime;
         //Posiçao e tamanho
         transform.position = Vector3.MoveTowards(transform.position, coracaoposition, speedReal);

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 370017775851074976}
   m_Layer: 0
   m_Name: GlobulosBrancos A
-  m_TagString: Untagged
+  m_TagString: GlobuloB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb44f23d8d33c004b8f2e232aaf5d6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  multiplicadorTamanho: 0.2
+  pontos: 2
+  pontosB: 0
 --- !u!58 &370017775851074976
 CircleCollider2D:
   m_ObjectHideFlags: 0

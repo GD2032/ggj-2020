@@ -5,10 +5,7 @@ using UnityEngine;
 public class coriBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private LayerMask vLayer;
     private Collider2D[] virus;
-    [SerializeField]
-    private LayerMask hLayer;
     private Collider2D[] Hemacia;
 
     counterController pontos;
@@ -24,7 +21,7 @@ public class coriBehaviour : MonoBehaviour
         {
             for (int i = 0; i < virus.Length; i++)
             {
-                if (virus[i].tag == "virus")
+                if (virus[i].tag == "Coronga")
                 {
                     pontos.cont(-virus[i].gameObject.GetComponent<Virus1>().pontos);
                     Destroy(virus[i].gameObject);

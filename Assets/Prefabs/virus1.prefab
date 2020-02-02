@@ -123,14 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28e89ddbc16b2d4b8e2f5448341af60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coracaoposition: {x: 0, y: 0, z: 0}
+  coracaoposition: {x: 0, y: 0}
   speed: 40
   multiplicadorTamanho: 0.2
-  pontos: 0
-  yourposition: {fileID: 8965316052446316565}
-  CoriLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  pontos: 2
 --- !u!58 &3190964020232914964
 CircleCollider2D:
   m_ObjectHideFlags: 0
